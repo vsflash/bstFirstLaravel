@@ -41,3 +41,22 @@ Route::delete('/task/{task}', function (Task $task) {
     $task->delete();
     return redirect('/');
 });
+
+Route::post('/task/{task}', function (Task $task) {
+    return view('task', [
+        'task' => $task,
+    ]);
+});
+
+/**
+ * update задачу
+ */
+Route::post('/task/{task}/update', function (Request $request) {
+    //$name = $request->id;
+    $task = Task::find($request->id);
+    $task->name = $request->name;
+    $task->save();
+    //$res->update(['name' => $name);
+    return redirect('/');
+    //$task->name = $request->name;
+});

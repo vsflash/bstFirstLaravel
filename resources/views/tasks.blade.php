@@ -54,6 +54,14 @@
                             </button>
                         </form>
                     </td>
+                    <td>
+                        <form method="post" action="/task/{{$task->id}}">
+                            {{ csrf_field() }}
+                            <button type="submit">
+                                <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
