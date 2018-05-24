@@ -5,8 +5,9 @@
     <!-- Отображение ошибок проверки ввода -->
     @include('common.errors')
     <!-- Форма новой задачи -->
-    <form action="/task/{{$task->id}}/update" method="POST" class="form-horizontal">
+    <form action="/task/{{$task->id}}" method="POST" class="form-horizontal">
         {{ csrf_field() }}
+        {{method_field('PUT')}}
         <!-- Имя задачи -->
         <div class="form-group">
             <label for="task" class="col-sm-3 control-label">Задача</label>
@@ -19,7 +20,7 @@
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
                 <button type="submit" class="btn btn-default">
-                    <i class="fa fa-plus"></i> Update
+                    <i class="fa fa-save"></i> Update
                 </button>
             </div>
         </div>
