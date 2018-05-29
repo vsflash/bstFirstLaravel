@@ -5,14 +5,14 @@
     <!-- Отображение ошибок проверки ввода -->
     @include('common.errors')
     <!-- Форма новой задачи -->
-    <form action="{{ url('task/'.$news->id) }}" method="POST" class="form-horizontal">
+    <form action="{{ url('news/'.$news->id) }}" method="POST" class="form-horizontal">
 	{{ csrf_field() }}
 	{{ method_field('PUT') }}
 	<!-- Имя задачи -->
 	<div class="form-group">
 	    <label for="task" class="col-sm-3 control-label">Новость</label>
 	    <div class="col-sm-6">
-		<input type="text" name="name" id="task-name" class="form-control" value="{{$news->name}}">
+		<input type="text" name="name" id="news-name" class="form-control" value="{{$news->name}}">
 	    </div>
 	</div>
 	<!-- Кнопка добавления задачи -->

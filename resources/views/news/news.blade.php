@@ -18,7 +18,7 @@
         <!-- Кнопка добавления задачи -->
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
-                <button type="submit" class="btn btn-default">
+                <button type="submit" class="btn btn-success">
                     <i class="fa fa-plus"></i> Добавить новость
                 </button>
             </div>
@@ -53,14 +53,14 @@
                         <form method="post" action="/news/{{$news_item->id}}">
                             {{ csrf_field() }}
                             {{method_field('DELETE')}}
-                            <button type="submit">
+                            <button type="submit" class="btn btn-danger">
                                 <i class="fa fa-trash"></i>
                             </button>
                         </form>
                     </td>
                     <td>
                         <a href="/news/{{$news_item->id}}/edit">
-                            <button type="submit">
+                            <button type="submit" class="btn btn-warning">
                                 <i class="fa fa-pencil-square-o"></i>
                             </button>
                         </a>
